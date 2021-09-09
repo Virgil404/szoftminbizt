@@ -27,6 +27,14 @@ function listTodo() {
 function newTodo(event){
     let name=prompt('Todo neve');
     let todo=new todo(name);
+    todoList.push(todo);
+    listTodo();
 }
+listTodo();
 
+
+  function handleDelete(event){
+      todoList.splice(Number(event.target['id']),1);
+      listTodo();
+  }
 }
