@@ -24,4 +24,9 @@ function listTodo() {
   Array.prototype.forEach.call(buttons, function(element) {
     element.addEventListener('click', e => handleDelete(e));
   });
+function newTodo(event){
+    let name=prompt('Todo neve');
+    let todo=new todo(name);
+}
+
 }
